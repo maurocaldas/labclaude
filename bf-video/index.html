@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin:0; padding:0; box-sizing:border-box; }
+      html, body { width:1080px; height:1920px; overflow:hidden; background:#000; }
+      #root { position:relative; width:1080px; height:1920px; background:#000; overflow:hidden; }
+      .scene { position:absolute; inset:0; width:1080px; height:1920px; overflow:hidden; }
+      .bg { position:absolute; left:-120px; top:-120px; width:1320px; height:2160px; object-fit:cover; filter:blur(40px) brightness(0.45); }
+      .pg { position:absolute; left:0; top:50%; width:1080px; height:auto; transform:translateY(-50%); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="86.0" data-width="1080" data-height="1920">
+      <div id="s0" class="clip scene" data-start="0.0" data-duration="5.5" data-track-index="0">
+        <img class="bg" src="assets/p-01.jpg" alt="" />
+        <img class="pg" src="assets/p-01.jpg" alt="Página 1" />
+      </div>
+      <div id="s1" class="clip scene" data-start="5.0" data-duration="6.5" data-track-index="1">
+        <img class="bg" src="assets/p-02.jpg" alt="" />
+        <img class="pg" src="assets/p-02.jpg" alt="Página 2" />
+      </div>
+      <div id="s2" class="clip scene" data-start="11.0" data-duration="5.5" data-track-index="0">
+        <img class="bg" src="assets/p-03.jpg" alt="" />
+        <img class="pg" src="assets/p-03.jpg" alt="Página 3" />
+      </div>
+      <div id="s3" class="clip scene" data-start="16.0" data-duration="6.5" data-track-index="1">
+        <img class="bg" src="assets/p-04.jpg" alt="" />
+        <img class="pg" src="assets/p-04.jpg" alt="Página 4" />
+      </div>
+      <div id="s4" class="clip scene" data-start="22.0" data-duration="6.5" data-track-index="0">
+        <img class="bg" src="assets/p-05.jpg" alt="" />
+        <img class="pg" src="assets/p-05.jpg" alt="Página 5" />
+      </div>
+      <div id="s5" class="clip scene" data-start="28.0" data-duration="6.5" data-track-index="1">
+        <img class="bg" src="assets/p-06.jpg" alt="" />
+        <img class="pg" src="assets/p-06.jpg" alt="Página 6" />
+      </div>
+      <div id="s6" class="clip scene" data-start="34.0" data-duration="6.5" data-track-index="0">
+        <img class="bg" src="assets/p-07.jpg" alt="" />
+        <img class="pg" src="assets/p-07.jpg" alt="Página 7" />
+      </div>
+      <div id="s7" class="clip scene" data-start="40.0" data-duration="6.5" data-track-index="1">
+        <img class="bg" src="assets/p-08.jpg" alt="" />
+        <img class="pg" src="assets/p-08.jpg" alt="Página 8" />
+      </div>
+      <div id="s8" class="clip scene" data-start="46.0" data-duration="6.5" data-track-index="0">
+        <img class="bg" src="assets/p-09.jpg" alt="" />
+        <img class="pg" src="assets/p-09.jpg" alt="Página 9" />
+      </div>
+      <div id="s9" class="clip scene" data-start="52.0" data-duration="5.5" data-track-index="1">
+        <img class="bg" src="assets/p-10.jpg" alt="" />
+        <img class="pg" src="assets/p-10.jpg" alt="Página 10" />
+      </div>
+      <div id="s10" class="clip scene" data-start="57.0" data-duration="5.5" data-track-index="0">
+        <img class="bg" src="assets/p-11.jpg" alt="" />
+        <img class="pg" src="assets/p-11.jpg" alt="Página 11" />
+      </div>
+      <div id="s11" class="clip scene" data-start="62.0" data-duration="6.5" data-track-index="1">
+        <img class="bg" src="assets/p-12.jpg" alt="" />
+        <img class="pg" src="assets/p-12.jpg" alt="Página 12" />
+      </div>
+      <div id="s12" class="clip scene" data-start="68.0" data-duration="6.5" data-track-index="0">
+        <img class="bg" src="assets/p-13.jpg" alt="" />
+        <img class="pg" src="assets/p-13.jpg" alt="Página 13" />
+      </div>
+      <div id="s13" class="clip scene" data-start="74.0" data-duration="7.5" data-track-index="1">
+        <img class="bg" src="assets/p-14.jpg" alt="" />
+        <img class="pg" src="assets/p-14.jpg" alt="Página 14" />
+      </div>
+      <div id="s14" class="clip scene" data-start="81.0" data-duration="5" data-track-index="0">
+        <img class="bg" src="assets/p-15.jpg" alt="" />
+        <img class="pg" src="assets/p-15.jpg" alt="Página 15" />
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#s0 .pg", {scale:1.0}, {scale:1.05, duration:5.5, ease:"none"}, 0.0);
+      tl.to("#s0", {opacity:0, duration:0.5, ease:"none"}, 5.0);
+      tl.fromTo("#s1", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 5.0);
+      tl.fromTo("#s1 .pg", {scale:1.0}, {scale:1.05, duration:6.5, ease:"none"}, 5.0);
+      tl.to("#s1", {opacity:0, duration:0.5, ease:"none"}, 11.0);
+      tl.fromTo("#s2", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 11.0);
+      tl.fromTo("#s2 .pg", {scale:1.0}, {scale:1.05, duration:5.5, ease:"none"}, 11.0);
+      tl.to("#s2", {opacity:0, duration:0.5, ease:"none"}, 16.0);
+      tl.fromTo("#s3", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 16.0);
+      tl.fromTo("#s3 .pg", {scale:1.0}, {scale:1.05, duration:6.5, ease:"none"}, 16.0);
+      tl.to("#s3", {opacity:0, duration:0.5, ease:"none"}, 22.0);
+      tl.fromTo("#s4", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 22.0);
+      tl.fromTo("#s4 .pg", {scale:1.0}, {scale:1.05, duration:6.5, ease:"none"}, 22.0);
+      tl.to("#s4", {opacity:0, duration:0.5, ease:"none"}, 28.0);
+      tl.fromTo("#s5", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 28.0);
+      tl.fromTo("#s5 .pg", {scale:1.0}, {scale:1.05, duration:6.5, ease:"none"}, 28.0);
+      tl.to("#s5", {opacity:0, duration:0.5, ease:"none"}, 34.0);
+      tl.fromTo("#s6", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 34.0);
+      tl.fromTo("#s6 .pg", {scale:1.0}, {scale:1.05, duration:6.5, ease:"none"}, 34.0);
+      tl.to("#s6", {opacity:0, duration:0.5, ease:"none"}, 40.0);
+      tl.fromTo("#s7", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 40.0);
+      tl.fromTo("#s7 .pg", {scale:1.0}, {scale:1.05, duration:6.5, ease:"none"}, 40.0);
+      tl.to("#s7", {opacity:0, duration:0.5, ease:"none"}, 46.0);
+      tl.fromTo("#s8", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 46.0);
+      tl.fromTo("#s8 .pg", {scale:1.0}, {scale:1.05, duration:6.5, ease:"none"}, 46.0);
+      tl.to("#s8", {opacity:0, duration:0.5, ease:"none"}, 52.0);
+      tl.fromTo("#s9", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 52.0);
+      tl.fromTo("#s9 .pg", {scale:1.0}, {scale:1.05, duration:5.5, ease:"none"}, 52.0);
+      tl.to("#s9", {opacity:0, duration:0.5, ease:"none"}, 57.0);
+      tl.fromTo("#s10", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 57.0);
+      tl.fromTo("#s10 .pg", {scale:1.0}, {scale:1.05, duration:5.5, ease:"none"}, 57.0);
+      tl.to("#s10", {opacity:0, duration:0.5, ease:"none"}, 62.0);
+      tl.fromTo("#s11", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 62.0);
+      tl.fromTo("#s11 .pg", {scale:1.0}, {scale:1.05, duration:6.5, ease:"none"}, 62.0);
+      tl.to("#s11", {opacity:0, duration:0.5, ease:"none"}, 68.0);
+      tl.fromTo("#s12", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 68.0);
+      tl.fromTo("#s12 .pg", {scale:1.0}, {scale:1.05, duration:6.5, ease:"none"}, 68.0);
+      tl.to("#s12", {opacity:0, duration:0.5, ease:"none"}, 74.0);
+      tl.fromTo("#s13", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 74.0);
+      tl.fromTo("#s13 .pg", {scale:1.0}, {scale:1.05, duration:7.5, ease:"none"}, 74.0);
+      tl.to("#s13", {opacity:0, duration:0.5, ease:"none"}, 81.0);
+      tl.fromTo("#s14", {opacity:0}, {opacity:1, duration:0.5, ease:"none"}, 81.0);
+      tl.fromTo("#s14 .pg", {scale:1.0}, {scale:1.05, duration:5.5, ease:"none"}, 81.0);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
