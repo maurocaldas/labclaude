@@ -1,0 +1,23 @@
+{
+  "name": "labclaude",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maurocaldas/labclaude.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maurocaldas/labclaude/issues"
+  },
+  "homepage": "https://github.com/maurocaldas/labclaude#readme",
+  "dependencies": {
+    "puppeteer": "^25.17.0"
+  }
+}
